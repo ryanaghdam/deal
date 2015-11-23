@@ -142,3 +142,9 @@ considered valid input.
 
 Returns the given value if it is an object or undefined.  An empty object is
 considered valid input.
+
+Planned Enhancements
+--------------------
+
+- Support schemas with nested objects
+- Support custom error messages
