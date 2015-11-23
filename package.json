@@ -1,5 +1,5 @@
 {
-  "name": "deal",
+  "name": "deal-validator",
   "version": "1.0.0",
   "description": "Provides validation for use in domain-driven design",
   "license": "MIT",

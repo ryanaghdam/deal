@@ -24,7 +24,7 @@ Example Usage
 
 ```javascript
 
-var d = require('deal');
+var d = require('deal-validator');
 
 > var createSong = d.define({
   artist: [d.required, d.string],
@@ -34,10 +34,10 @@ var d = require('deal');
 
 // Given valid input, a valid object is returned
 > createSong({
-  artist: 'The Grateful Dead',
+  artist: 'Grateful Dead',
   title: 'Deal'
 });
-{ artist: 'The Grateful Dead', title: 'Deal' }
+{ artist: 'Grateful Dead', title: 'Deal' }
 
 // If any of the validations fail, an error is thrown
 > createSong({ title: 'Deal' });
@@ -55,11 +55,11 @@ Error: value cannot be undefined
 
 // Any attributes not defined in the schema are ignored
 > createSong({
-  artist: 'The Grateful Dead',
+  artist: 'Grateful Dead',
   title: 'Playing in the Band',
   ruinedByDonna: true
 });
-{ artist: 'The Grateful Dead', title: 'Playing in the Band' }
+{ artist: 'Grateful Dead', title: 'Playing in the Band' }
 
 // Custom validator
 var nonEmptyArray = function (value) {
