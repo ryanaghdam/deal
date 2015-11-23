@@ -1,11 +1,20 @@
 {
   "name": "deal",
   "version": "1.0.0",
+  "description": "Provides validation for use in domain-driven design",
+  "license": "MIT",
+  "author": {
+    "name": "Ryan Aghdam",
+    "email": "ryan@ryanaghdam.com"
+  },
+  "repository": "ryanaghdam/deal",
+  "bugs": {
+    "url" : "https://github.com/ryanaghdam/deal/issues"
+  },
   "scripts": {
     "test": "mocha",
     "test:watch": "mocha --watch --reporter min --no-colors"
   },
-  "private": true,
   "dependencies": {
     "ramda": "^0.18.0"
   },
