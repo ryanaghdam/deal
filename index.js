@@ -19,99 +19,13 @@ module.exports = {
     }
   },
 
-  optional: function optional(value) {
-    return value;
-  },
 
-  required: function required(value) {
-    if (typeof value === 'undefined') {
-      throw new Error('value cannot be undefined');
-    }
-
-    if (value === null) {
-      throw new Error('value cannot be null');
-    }
-
-    return value;
-  },
-
-  string: function string(value) {
-    if (typeof value === 'undefined') {
-      return value;
-    }
-
-    if (typeof value !== 'string') {
-      throw new Error('expected a string');
-    }
-
-    return value;
-  },
-
-  boolean: function boolean(value) {
-    if (typeof value === 'undefined') {
-      return value;
-    }
-
-    if (typeof value !== 'boolean') {
-      throw new Error('expected a boolean');
-    }
-
-    return value;
-  },
-
-  number: function number(value) {
-    if (typeof value === 'undefined') {
-      return value;
-    }
-
-    if (typeof value !== 'number') {
-      throw new Error('expected a number');
-    }
-
-    if (value === Infinity || value === -Infinity) {
-      throw new Error('expected a non-Infinite number');
-    }
-
-    if (isNaN(value)) {
-      throw new Error('expected a number other than NaN');
-    }
-
-    return value;
-  },
-
-  function: function (value) {
-    if (typeof value === 'undefined') {
-      return value;
-    }
-
-    if (typeof value !== 'function') {
-      throw new Error('expected a function');
-    }
-
-    return value;
-  },
-
-  array: function array(value) {
-    if (typeof value === 'undefined') {
-      return value;
-    }
-
-    if (!Array.isArray(value)) {
-      throw new Error('expected an array');
-    }
-
-    return value;
-  },
-
-  object: function object(value) {
-    if (typeof value === 'undefined' || value === null) {
-      return value;
-    }
-
-    if (typeof value !== 'object' || Array.isArray(value)) {
-      throw new Error('expected an object');
-    }
-
-    return value;
-  }
+  optional: require('./lib/validators/optional'),
+  required: require('./lib/validators/required'),
+  string: require('./lib/validators/string'),
+  boolean: require('./lib/validators/boolean'),
+  number: require('./lib/validators/number'),
+  function: require('./lib/validators/function'),
+  array: require('./lib/validators/array'),
+  object: require('./lib/validators/object')
 };

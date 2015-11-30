@@ -12,8 +12,8 @@
     "url" : "https://github.com/ryanaghdam/deal/issues"
   },
   "scripts": {
-    "test": "mocha",
-    "test:watch": "mocha --watch --reporter min --no-colors"
+    "test": "mocha --recursive",
+    "test:watch": "mocha --watch --recursive --reporter min --no-colors"
   },
   "dependencies": {
     "ramda": "^0.18.0"
